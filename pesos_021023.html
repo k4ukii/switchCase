@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pesos</title>
+</head>
+<body>
+  <h1>PESO</h1>
+  <div id="situacao"></div>
+  
+  
+  
+  <script>
+    let nome1 = prompt("Insíra o primeiro nome ");
+    let n1 = parseInt(prompt("Insira o peso (kg)"));
+    let nome2 = prompt("Insíra o segundo nome");
+    let n2 = parseInt(prompt("Insira o peso (kg)"));
+    let nome3 = prompt("Insíra o terceiro nome");
+    let n3 = parseInt(prompt("Insira o peso (kg)"));
+    let c1 = nome1+" "+ n1;
+    let c2 = nome2+" "+n2;
+    let c3 = nome3+" " +n3;
+    let pri ="";
+    let seg ="";
+    let ter ="";
+   
+   
+    switch (true) {
+    case n1 >= n2 && n1 >= n3:
+        pri = c1;
+        if (n2 >= n3) {
+            seg = c2;
+            ter = c3;
+        } else {
+            seg = c3;
+            ter = c2;
+        }
+        break;
+    case n2 >= n1 && n2 >= n3:
+        pri = c2;
+        if (n1 >= n3) {
+            seg = c1;
+            ter = c3;
+        } else {
+            seg = c3;
+            ter = c1;
+        }
+        break;
+    case n3 >= n1 && n3 >= n2:
+        pri = c3;
+        if (n1 >= n2) {
+            seg = c1;
+            ter = c2;
+        } else {
+            seg = c2;
+            ter = c1;
+        }
+        break;
+}
+let retorno = pri +" "+ seg + " "+ ter;
+  
+        document.getElementById("situacao").innerHTML = retorno;
+        
+
+
+  </script>
+</body>
+</html>
