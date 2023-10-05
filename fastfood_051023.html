@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fast food</title>
+</head>
+<body>
+  <h1>PEDIDO</h1>
+  <div id="p1"></div>
+  <br>
+  <div id="p2"></div>
+  <br>
+  <div id="p3"></div>
+
+  <h1>Obrigado por comprar conosco!</h1>
+
+  
+  
+  
+  <script>
+    let lanche1 = prompt("Gostaria de pedir o BIG SUPER SANDUBA? (sim/nao)");
+    let n1 = parseInt(prompt("quantos?"));
+    let lanche2 = prompt("Gostaria de pedir o QUASE SUPER SANDUBA? (sim/nao)");
+    let n2 = parseInt(prompt("quantos?"));
+    let lanche3 = prompt("Gostaria de pedir o MIRRANDUS SANDUBA? (sim/nao)");
+    let n3 = parseInt(prompt("quantos?"));
+    let c1 = n1 * 5;
+    let c2 = n2 * 3;
+    let c3 = n3 * 1.5;
+    let p1 ="";
+    let p2 ="";
+    let p3 ="";
+   
+   
+    switch (lanche1) {
+    case "sim" :
+       p1 = "Big Super Sanduba- 2 hamburgueres, queijo, batata frita e refrigerante  Q: " + n1 + " Total(R$): " + c1;
+      break;
+    }
+    switch (lanche2) {
+      case "sim" :
+       p2 = "Quase Super Sanduba- 1 hamburguere,  batata frita e refrigerante  Q: " + n2 + " Total(R$): " + c2;
+      break;
+    }
+    switch (lanche3) {
+      case  "sim" :
+       p3 = "Mirradus Sanduba- 1 misto quente e refrigerante  Q: " + n3 + " Total(R$): " + c3;
+      break;
+    }
+
+  
+        document.getElementById("p1").innerHTML = p1;
+        document.getElementById("p2").innerHTML = p2;
+        document.getElementById("p3").innerHTML = p3;
+
+        
+
+
+  </script>
+</body>
+</html>
