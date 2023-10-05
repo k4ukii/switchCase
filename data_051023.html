@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data</title>
+</head>
+<body>
+  <h1>Que dia é hoje?</h1>
+  <div id="retorno"></div>
+
+  
+
+  <script>
+    let data = prompt("Insira a data de hoje (00/00/0000)");
+    let parte = data.split ('/');
+    let dia = parte[0];
+    let mes = parte[1];
+    let ano = parte[2];
+ 
+    
+   
+    switch (mes) {
+    case "01" :
+       p1 = dia + " de Janeiro de "+ano;
+      break;
+      case "02" :
+       p1 = dia + " de Fevereiro de "+ano;
+      break;
+      case  "03":
+       p1 = dia + " de Março de "+ano;
+       break;
+       case  "04":
+       p1 = dia + " de Abril de "+ano;
+       break;
+       case  "05":
+       p1 = dia + " de Maio de "+ano;
+       break;
+       case  "06":
+       p1 = dia + " de Junho de "+ano;
+       break;
+       case  "07":
+       p1 = dia + " de Julho de "+ano;
+       break;
+       case  "08":
+       p1 = dia + " de Agosto de "+ano;
+       break;
+       case  "09":
+       p1 = dia + " de Setembro de "+ano;
+       break;
+       case  "10":
+       p1 = dia + " de Outubro de "+ano;
+       break;
+       case  "11":
+       p1 = dia + " de Novembro de "+ano;
+       break;
+       case "12":
+       p1 = dia + " de Dezembro de "+ano;
+       break;
+       default:
+       p1 =" Data inserida incorretamente ";
+       
+
+    }
+        document.getElementById("retorno").innerHTML = p1;
+</script>
+</body>
+</html>
