@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boletim</title>
+</head>
+<body>
+  <h1>BOLETIM</h1>
+  <div id="situacao"></div>
+  
+  
+  
+  
+  <script>
+    let aluno = prompt("Insíra o nome do aluno ");
+    let n1 = prompt("Insíra a primeira nota");
+    let n2 = prompt("Insíra a segunda nota");
+    let n3 = prompt("Insíra a terceira nota");
+    let media = (parseInt(n1)+parseInt(n2)+parseInt(n3))/3
+    let retorno = "";
+
+    switch(true){
+    case media >= 6: 
+        retorno = "O aluno " + aluno +"  foi aprovado com média " + media
+        break;
+    case media <= 6:
+    retorno = "O aluno " + aluno +"  foi reprovado com média " + media
+        break;
+    default:
+        break;
+    }
+        
+    var decrescente = [n1, n2, n3];
+    decrescente.sort(function(a,b){return b-a;});
+   
+
+        document.getElementById("situacao").innerHTML = retorno;
+        document.write("Notas "+ decrescente);
+      
+
+
+  </script>
+</body>
+</html>
