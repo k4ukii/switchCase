@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>empresa</title>
+</head>
+<body>
+  <h1>Cálculo de Comissões</h1>
+  <div id="retorno"></div>
+
+  <h1>Parabéns!</h1>
+
+  <script>
+    let funcionario = prompt("Insira o nome do funcionário");
+    let produto = parseInt(prompt("Quantos produtos este funcionário vendeu?"));
+    let p1 = 0;
+   
+    
+   
+    switch (true) {
+    case produto<250 :
+       p1 = produto * 1.00;
+      break;
+   
+      case produto>250 && produto<500 :
+       p1 = produto * 1.50;
+      break;
+
+      case  produto>500 :
+       p1 = produto * 2.00;
+       break;
+    }
+
+  let retorno = funcionario +" Quantidade de produtos vendidos: "+produto+ " Comissão: "+p1;
+        document.getElementById("retorno").innerHTML = retorno;
+       
+
+        
+
+
+  </script>
+</body>
+</html>
